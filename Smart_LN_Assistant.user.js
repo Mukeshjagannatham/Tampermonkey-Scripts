@@ -10,6 +10,16 @@
 
 (function() {
     'use strict';
+    
+    // Detect the browser
+    if (navigator.userAgent.indexOf('Chrome') !== -1) {
+        alert('This script is only supported on Firefox. Please install Tampermonkey for Firefox.');
+        return; // Prevent the script from running in Chrome
+    }
+
+    // Your script logic here...
+    console.log('Script running in Firefox');
+})();
 
     const replacementTexts = {
         'TNM': 'TNM\nDriver/Dispatch:\nLong/Lat:\nProximity and Route:\nMiles to destination:\nIssue:\nResolution:',
